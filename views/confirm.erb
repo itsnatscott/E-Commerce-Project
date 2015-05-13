@@ -1,11 +1,14 @@
 <html>
-<head>
-	<title></title>
-</head>
+<header>
+<a href = "/index" ><h1>T-Shirt.Ly</h1></a>
+</header>
 <body>
 	<h2>Thank You for your purchase of <%= shirtTransaction.trans_quant %> E-shirts. Costing <%= total %></h2>
 	</br>
 	<img src="<%= shirt.img_url %>">
 	<p>your confirmation Email is <%= shirtTransaction.email %> </p>
+	<form action="/index">
+<input type="submit" value="Awesome!">
+</form>
 </body>
 </html>

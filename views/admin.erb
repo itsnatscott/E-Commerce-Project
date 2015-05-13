@@ -2,7 +2,7 @@
 <html>
     <body>
         <header>
-            <a href = "/index" ><h1>T-Shirt.Ly</h1></a>
+            <a href = "/admin" ><h1>T-Shirt.Ly</h1></a>
             <h2>Add A T-Shirt</h2>
             <div class="adminBar">
                 <form action = "/admin" method="POST">
@@ -16,7 +16,7 @@
         <% if (tshirts) %>
             <ul style= "display: inline-block">
                 <% tshirts.each do |shirt| %>
-                    <a href="/admin/<%= shirt.id %>"><img src="<%= shirt.img_url%>"></a>
+                    <a href="/admin/<%= shirt.id %>"><div class="shirtpic"><img src="<%= shirt.img_url %>"></div></a>
 
                     <div class= info>
                         <h4> quantity <%= shirt.quantity %>
