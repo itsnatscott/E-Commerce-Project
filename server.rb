@@ -41,6 +41,14 @@ get '/admin/:id' do
 	erb :show, locals: {shirt: shirt, shirtTransactions: shirtTransactions}
 end
 
+#Confirmation of purchase
+get '/index/:id/confirm' do
+	id=params[:id]
+	shirt = Tshirt.find(params[:id])
+	shirtTrans = shirt.transactions
+	binding.pry   
+	#.last?????????
+end
 
 #update a tshirt from 'admin show page'
 put '/admin/:id' do
@@ -71,5 +79,13 @@ post '/admin' do
 	Tshirt.create({quantity: new_quant, price: new_price, img_url: new_pic})
 	redirect ('/admin')
 end
+#delete a shirt
+delete '/admin/:id' do
+	shirt = Tshirt.find(params[:id])
+	shirt.destroy
+	redirect ('/admin')
+end
+
+
 
 
