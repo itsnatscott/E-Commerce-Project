@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS tshirts;
+DROP TABLE IF EXISTS transactions;
+
 CREATE TABLE IF NOT EXISTS tshirts(
 id INTEGER PRIMARY KEY,
 quantity INTEGER,
@@ -5,9 +8,11 @@ price INTEGER,
 img_url TEXT
 );
 
+
 CREATE TABLE IF NOT EXISTS transactions(
 id INTEGER PRIMARY KEY,
 email TEXT,
 tshirt_id INTEGER,
+trans_quant INTEGER,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
