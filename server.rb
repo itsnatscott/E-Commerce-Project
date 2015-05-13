@@ -14,7 +14,7 @@ end
 get '/index' do
 	# Passing SELECT * FROM Tshirts
 	tshirts = Tshirt.all
-	erb :index, locals {tshirts: tshirts}
+	erb :index, locals: {tshirts: tshirts}
 end
 
 
