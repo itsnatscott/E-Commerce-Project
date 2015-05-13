@@ -29,16 +29,16 @@ E-Shart.ly is a t-shirt inventory site. There are two main compartments, user an
 * The admin user can remove t-shirts and update t-shirts from the form in this page. Each t-shirt for sale has a quantity avaiable, a price, and an image url. (all t-shirts are one-size-fits-all)
 
 #####App authors:
-Brewster Scott
-Meir Snyder
-Andrew Tomlinson
-Aung Barteaux
+* Brewster Scott
+* Meir Snyder
+* Andrew Tomlinson
+* Aung Barteaux
 
 #####Technologies:
-Ruby
-Sinatra
-Active Record
-sqlite3
+* Ruby
+* Sinatra
+* Active Record
+* sqlite3
 
 See our trello board for ERD diagram and planning images:
 
