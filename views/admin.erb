@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+    <body>
+        <header>
+            <a href = "/index" ><h1>T-Shirt.Ly</h1></a>
+            <h2>Add A T-Shirt</h2>
+            <div class="adminBar">
+                <form action = "/admin" method="POST">
+                    <input type = "number" name = "quant" placeholder = "Quantity">
+                    <input type = "number" name = "price" placeholder = "$">
+                    <input type = "text" name = "shirt_url" placeholder = "Image URL">
+                    <button>Add</button>
+                </form>
+            </div>
+        </header>
+        <% if (tshirts) %>
+            <ul style= "display: inline-block">
+                <% tshirts.each do |shirt| %>
+                    <a href="/admin/<%= shirt.id %>"><img src="<%= shirt.img_url%>"></a>
+
+                    <div class= info>
+                        <h4> quantity <%= shirt.quantity %>
+                        price $<%= shirt.price %></h4>
+                    </div>
+                <% end %>
+            </ul>
+        <% end %>
+    </body>
+</html>

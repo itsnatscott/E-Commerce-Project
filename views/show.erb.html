@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+    <body>
+        <header>
+            <a href = "/index" ><h1>T-Shirt.Ly</h1></a>
+            <div class="adminBar">
+                <form action="/admin/ <%= shirt.id %>" method="POST">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="number" name="quant" required>
+                    <input type="number" name="price" required>
+                    <input type="text" name="shirt_url" required>
+                    <button>EDIT</button>
+                </form>
+                <form action="/admin" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button>DELETE</button>
+                </form>
+            </div>
+        </header>
+        <img src="<%= shirt.image_url %>">
+        <h2>T-shirt purchase history</h2>
+        <% if (shirtTransactions) %>
+        <% shirtTransactions.each do |trans| %>
+            <ul>
+                <li><%= trans.email %></li>
+                <li><%= trans.created_at %></li>
+                <li><%= trans.trans_quant %></li>
+            </ul>
+    </body>
+</html>
