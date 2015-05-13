@@ -38,7 +38,7 @@ end
 get '/admin/:id' do 
 	shirt = Tshirt.find(params[:id])
 	shirtTransactions = shirt.transactions
-	erb :show, locals: {shirt: shirt, shirtTransactions: shirtTransactionss}
+	erb :show, locals: {shirt: shirt, shirtTransactions: shirtTransactions}
 end
 
 
