@@ -65,7 +65,7 @@ post '/index/:id' do
 	shirt_quant = shirt.quantity
 	trans_quant= params[:quant].to_i
 	new_quant = shirt_quant - trans_quant
-	# shirt.update({quantity: new_quant})
+	shirt.update({quantity: new_quant})
 	Transaction.create({email: params[:email], tshirt_id: params[:id], trans_quant: trans_quant})
 	redirect ("/index/#{params[:id]}/confirm")
 end
