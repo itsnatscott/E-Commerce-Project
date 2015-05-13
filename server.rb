@@ -45,9 +45,8 @@ end
 get '/index/:id/confirm' do
 	id=params[:id]
 	shirt = Tshirt.find(params[:id])
-	shirtTrans = shirt.transactions
-	binding.pry   
-	#.last?????????
+	shirtTrans = shirt.transactions.last
+	erb :confirm , locals: {shirt: shirt, shirtTransaction: shirtTrans}
 end
 
 #update a tshirt from 'admin show page'
