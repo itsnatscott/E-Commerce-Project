@@ -1,0 +1,17 @@
+<html>
+<body>
+<% if (tshirts) %>
+<ul style= "display: inline-block">
+<% tshirts.each do |shirt| %>
+<div class= pic style="background:url(<%=shirt.img_url%>)">
+</div>
+<div class= info>
+<h4> quantity <%= shirt.quantity %>
+	price <%= shirt.price %></h4>
+<button href="/purchase/<%= shirt.id %>"> Buy </button>
+</div>
+<% end %>
+</ul>
+<% end %>
+</body>
+</html>
