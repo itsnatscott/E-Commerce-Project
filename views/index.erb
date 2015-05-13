@@ -1,23 +1,25 @@
+<!DOCTYPE>
 <html>
+<head>
+    <link rel = "stylesheet" type = "text/css" href = "/css/style.css">
+  </head>
 <header>
-<a href = "/index" ><h1>T-Shirt.Ly</h1></a>
+<a href = "/index" ><img class="logo" src="/images/logo.svg" </a>
 </header>
 <body>
-<% if (tshirts) %>
-<ul style= "display: inline-block">
-<% tshirts.each do |shirt| %>
-<div class="shirtpic"><img src="<%= shirt.img_url%>"></div>
-
-<div class= "info">
-<h4> quantity: <%= shirt.quantity %>
-	price $<%= shirt.price %></h4>
-
-<form action="/index/<%= shirt.id %>">
-<input type="submit" value="Buy">
-</form>
-</div>
-<% end %>
-</ul>
-<% end %>
-</body>
+	<% if (tshirts) %>
+		<ul style= "display: inline-block">
+		<% tshirts.each do |shirt| %>
+			<div class="shirt" style="background:url(<%= shirt.img_url %>)">
+				<span class="info"> quantity: <%= shirt.quantity %>
+					price $<%= shirt.price %>
+					<form style= "display: inline-block;"action="/index/<%= shirt.id %>">
+						<input type="submit" value="Buy">
+					</form>
+				</span>
+			</div>
+		<% end %>
+		</ul>
+	<% end %>
+	</body>
 </html>
