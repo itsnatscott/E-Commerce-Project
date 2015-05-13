@@ -11,13 +11,13 @@
                     <input type="text" name="shirt_url" required>
                     <button>EDIT</button>
                 </form>
-                <form action="/admin" method="POST">
+                <form action="/admin/<%= shirt.id %>" method="POST">
                     <input type="hidden" name="_method" value="DELETE">
                     <button>DELETE</button>
                 </form>
             </div>
         </header>
-        <img src="<%= shirt.image_url %>">
+        <img src="<%= shirt.img_url %>">
         <h2>T-shirt purchase history</h2>
         <% if (shirtTransactions) %>
         <% shirtTransactions.each do |trans| %>
@@ -25,6 +25,9 @@
                 <li><%= trans.email %></li>
                 <li><%= trans.created_at %></li>
                 <li><%= trans.trans_quant %></li>
+                <% end %>
             </ul>
+            <% end %>
+
     </body>
 </html>
