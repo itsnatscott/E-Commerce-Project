@@ -3,7 +3,7 @@
 <% if (tshirts) %>
 <ul style= "display: inline-block">
 <% tshirts.each do |shirt| %>
-<div class= pic style="background:url(<%=shirt.img_url%>)">
+<div <img src=("<%= shirt.image_url%>")>
 </div>
 <div class= info>
 <h4> quantity <%= shirt.quantity %>
