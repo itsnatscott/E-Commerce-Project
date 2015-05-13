@@ -12,7 +12,11 @@
             <div class="adminBar">
 	            <form action="/index/<%= tshirtId.id %>" method="POST">
 		            <input type="text" name="email" placeholder="Your email" required>
-		            <input type="text" name="quant" placeholder="Quantity">
+		            <select type="text" name="quant" placeholder="Quantity" required>
+                        <%  tshirtId.quantity.times do |num| %>
+                        <option><%= num + 1 %></option>
+                        <% end %>
+                        </select>
 		        	<button>Confirm</button>
 		         </form>
 	        </div>

@@ -86,6 +86,7 @@ post '/admin' do
 	new_price = params[:price]
 	new_quant = params[:quant]
 	# add the new tshirt to the database
+	# binding.pry
 	Tshirt.create({quantity: new_quant, price: new_price, img_url: new_pic})
 	redirect ('/admin')
 end
