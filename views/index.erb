@@ -6,9 +6,12 @@
 <img src="<%= shirt.img_url%>">
 
 <div class= info>
-<h4> quantity <%= shirt.quantity %>
-	price <%= shirt.price %></h4>
-<button href="/purchase/<%= shirt.id %>"> Buy </button>
+<h4> quantity: <%= shirt.quantity %>
+	price $<%= shirt.price %></h4>
+
+<form action="/index/<%= shirt.id %>">
+<input type="submit" value="Buy">
+</form>
 </div>
 <% end %>
 </ul>
