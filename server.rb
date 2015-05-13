@@ -20,8 +20,7 @@ end
 
 # order screen where user puts their data after clicking purchase button for tshirt
 get '/index/:id' do
-	params = params[:id]
-	tshirtId = Tshirt.find_by(params) 
+	tshirtId = Tshirt.find(params[:id]) 
 	erb :purchase, locals: {tshirtId: tshirtId}
 end
 
@@ -43,10 +42,12 @@ end
 
 #Confirmation of purchase
 get '/index/:id/confirm' do
-	id=params[:id]
+	# id = params[:id]
 	shirt = Tshirt.find(params[:id])
 	shirtTrans = shirt.transactions.last
-	erb :confirm , locals: {shirt: shirt, shirtTransaction: shirtTrans}
+	purch_quant = shirtTrans.trans_quant
+	total = purch_quant * shirt.price
+	erb :confirm, locals: {shirt: shirt, shirtTransaction: shirtTrans, total: total}
 end
 
 #update a tshirt from 'admin show page'
@@ -59,16 +60,14 @@ put '/admin/:id' do
 	redirect ('/admin')
 end
 #subtract purchased quantity from shirt id, add transaction row to table
-post 'index/:id' do
+post '/index/:id' do
 	shirt = Tshirt.find(params[:id])
 	shirt_quant = shirt.quantity
 	trans_quant= params[:quant].to_i
 	new_quant = shirt_quant - trans_quant
-	trans_email= params[:email]
-	shirt_id= params[:id]
-	shirt.update({quantity: new_quant})
-	Transaction.create({email: trans_email, tshirt_id: shirt_id})
-	redirect ('index/#{params[:id]}/confirm')
+	# shirt.update({quantity: new_quant})
+	Transaction.create({email: params[:email], tshirt_id: params[:id], trans_quant: trans_quant})
+	redirect ("/index/#{params[:id]}/confirm")
 end
 #add a new shirt to the site
 post '/admin' do
@@ -78,6 +77,16 @@ post '/admin' do
 	Tshirt.create({quantity: new_quant, price: new_price, img_url: new_pic})
 	redirect ('/admin')
 end
+
+# post '/index/:id/confirm' do
+#     # id=params[:id]
+#     shirt = Tshirt.find(params[:id])
+#     shirtTrans = shirt.transactions.last
+#     # binding.pry
+#     purch_quant = shirtTrans.trans_quant
+#     total = purch_quant * shirt.price
+#     erb :confirm , locals: {shirt: shirt, shirtTransaction: shirtTrans, total: total}
+# end
 #delete a shirt
 delete '/admin/:id' do
 	shirt = Tshirt.find(params[:id])

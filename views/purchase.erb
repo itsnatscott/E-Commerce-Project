@@ -4,7 +4,7 @@
         <header>
             <a href = "/index" ><h1>T-Shirt.Ly</h1></a>
             <div class="adminBar">
-	            <form action="/index/ <%= tshirtId.id %>" method="POST">
+	            <form action="/index/<%= tshirtId.id %>" method="POST">
 		            <input type="text" name="email" placeholder="Your email" required>
 		            <input type="text" name="quant" placeholder="Quantity">
 		        	<button>Confirm</button>
@@ -13,7 +13,7 @@
 	    </header>
 
 	    <ul>
-		  	<li><img src="<%= tshirtId.img %>"></li>
+		  	<li><img src="<%= tshirtId.img_url %>"></li>
 		  	<li><%= tshirtId.price %></li>
 		</ul>
 	</body>
