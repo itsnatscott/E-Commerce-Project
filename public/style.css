@@ -21,3 +21,7 @@ span{
     left: 120px;*/
     /* padding-left: 100px; */
     /* padding-bottom: 20px; */
+.trans_list {
+	display: inline-block;
+	list-style: none;
+}

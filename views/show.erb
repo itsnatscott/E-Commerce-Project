@@ -1,33 +1,44 @@
 <!DOCTYPE>
 <html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "/css/style.css">
+    </head>
     <body>
         <header>
             <a href = "/admin" ><h1>T-Shirt.Ly</h1></a>
             <div class="adminBar">
-                <form action="/admin/ <%= shirt.id %>" method="POST">
+                <li class="edit_delete"><form action="/admin/ <%= shirt.id %>" method="POST">
                     <input type="hidden" name="_method" value="PUT">
-                    <input type="number" name="quant" required>
-                    <input type="number" name="price" required>
-                    <input type="text" name="shirt_url" required>
+                    <input type="number" name="quant" placeholder="Quantity" required>
+                    <input type="number" name="price" placeholder="$" required>
+                    <input type="text" name="shirt_url" placeholder="Image URL" required>
                     <button>EDIT</button>
-                </form>
-                <form action="/admin/<%= shirt.id %>" method="POST">
+                </form></li>
+                <li class="edit_delete"><form action="/admin/<%= shirt.id %>" method="POST">
                     <input type="hidden" name="_method" value="DELETE">
                     <button>DELETE</button>
-                </form>
+                </form></li>
             </div>
         </header>
         <div class="shirtpic"><img src="<%= shirt.img_url %>"></div>
-        <h2>T-shirt purchase history</h2>
-        <% if (shirtTransactions) %>
-        <% shirtTransactions.each do |trans| %>
-            <ul>
-                <li><%= trans.email %></li>
-                <li><%= trans.created_at %></li>
-                <li><%= trans.trans_quant %></li>
-                <% end %>
-            </ul>
+        <div class="history">
+            <h2>T-shirt purchase history</h2>
+                <table>
+                    <tr>
+                        <td class="one">Email</td>
+                        <td class="three">Quantity</td>
+                        <td class="two">Time Purchased</td>
+                    </tr>
+                    <% if (shirtTransactions) %>
+                        <% shirtTransactions.each do |trans| %>
+                        <tr>
+                            <td class="one"><%= trans.email %></td>
+                            <td class="three"><%= trans.trans_quant %></td>
+                            <td class="two"><%= trans.created_at %></td>
+                        </tr>
+                    <% end %>
+                </table>
             <% end %>
-
+        </div>
     </body>
 </html>
