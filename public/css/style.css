@@ -9,7 +9,12 @@
 body{
 
     background-color: palegoldenrod;
+    margin-left:40px;
+    margin-right:40px;
 
+}
+ul {
+	padding-left: 0px;
 }
 .buy{
 	position: relative;
@@ -33,6 +38,13 @@ body{
 	position: relative;
 	background-color: rgba(102,118,104,.7);
 	top: 88.2%;
+	text-align: center
+
+}
+.wordblock2{
+	position: relative;
+	background-color: rgba(102,118,104,.7);
+	top: 94.2%;
 	text-align: center
 
 }
