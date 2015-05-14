@@ -1,17 +1,20 @@
 *{
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
 }
 
 body{
-
-    background-color: palegoldenrod;
-    margin-left:40px;
-    margin-right:40px;
-
+	background: url(/images/bkg.svg)no-repeat center center fixed; 
+	background-color: palegoldenrod;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin-left:40px;
+	margin-right:40px;
 }
 ul {
 	padding-left: 0px;
@@ -20,7 +23,7 @@ ul {
 	position: relative;
 	top: -2px;
 	background-color: rgb(222,136,185);
-  border-style: none;
+	border-style: none;
 
 }
 .shirt{
@@ -72,12 +75,12 @@ span{
 	left: 31px
 }
 .trans_li {
-    display: inline-block;
-    list-style: none;
+	display: inline-block;
+	list-style: none;
 }
 
 .history{
-    text-align: center;
+	text-align: center;
 }
 
 .shirtpic {
@@ -94,52 +97,52 @@ span{
 
 table{
 	font-family: courier;
-    margin-right: auto;
-    margin-left: auto;
-    width:50%;
+	margin-right: auto;
+	margin-left: auto;
+	width:50%;
 }
 td {
-    height: 25px;
+	height: 25px;
 }
 .one{
-    margin-left: 10px;
-    width:8%;
+	margin-left: 10px;
+	width:8%;
 }
 .two{
-    margin-left: 100px;
-    width:10%;
+	margin-left: 100px;
+	width:10%;
 }
 .three{
-    margin-left: 50px;
-    width:5%;
+	margin-left: 50px;
+	width:5%;
 }
 
 .edit_delete {
-    display: inline-block;
+	display: inline-block;
 }
 .confirmHeader{
-    text-align: left;
-    background-color: darkblue;
-    padding: 1px;
+	text-align: left;
+	background-color: darkblue;
+	padding: 1px;
 }
 
 .confirmHeader h1{
-    color: white;
+	color: white;
 }
 
 .confirmHeader a{
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .confirm{
-    background-color: lightblue;
-    text-align: center;
+	background-color: lightblue;
+	text-align: center;
 }
 
 .confirm input{
-    border: 2px solid blue;
-    border-radius: 5px;
-    background-color: white;
-    padding: 10px;
-    font-size: 14px;
+	border: 2px solid blue;
+	border-radius: 5px;
+	background-color: white;
+	padding: 10px;
+	font-size: 14px;
 }
