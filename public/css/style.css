@@ -1,17 +1,26 @@
-body{
-	background-color:pink;
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
 }
-div{
-	display: inline-block; 
-	width:300px; 
-	height:300px; 
-	background-size: contain; 
-	background-blend-mode: multiply;  
-	border: 2px solid LightSteelBlue;
-	margin:3px;
-	}
 
-	.shirt{
+body{
+
+    background-color: palegoldenrod;
+
+}
+.buy{
+	position: relative;
+	top: -2px;
+	background-color: rgb(222,136,185);
+  border-style: none;
+
+}
+.shirt{
+	background-image: url();
+	background-color: beige;
 	display: inline-block; 
 	width:300px; 
 	height:300px; 
@@ -19,11 +28,25 @@ div{
 	background-blend-mode: multiply;  
 	border: 2px solid LightSteelBlue;
 	margin:3px;
+}
+.wordblock{
+	position: relative;
+	background-color: rgba(102,118,104,.7);
+	top: 88.2%;
+	text-align: center
+
 }
 
 span{
-	position:relative;
-	top: 280px;
-	left: 120px;
-	/*bottom:86%;*/
+	font-family: courier;
+	/*font-weight: bold;*/
+	color:white;
+	position: inherit;
+	bottom: -7px;
+}
+
+.logo{
+	width: 90%;
+	position: relative;
+	left: 31px
 }
