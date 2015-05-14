@@ -5,7 +5,7 @@ E-Shart.ly is a t-shirt inventory site. There are two main compartments, user an
 ##User Side
 
 ####Index Page:
-* A user can see a list of t-shirts and click buy to enter a quantity in the purchase page.
+* A user can see a list of t-shirts with price and quantity and click "Buy" to go to the purchase page.
 
 ####Purchase Page:
 * The user can "buy" any quantity of a single t-shirt style at a time. Quantity of t-shirt in-stock is displayed in the drop down menu.
@@ -22,7 +22,24 @@ E-Shart.ly is a t-shirt inventory site. There are two main compartments, user an
 * From the index page, an admin can click on Admin link to access Admin page.
 * The admin user can add t-shirts on the form at the top of Admin page.
 * User can click on each t-shirt to access their individual information.
+* Admin user can get back to the index page through the E-Shart.ly logo.
 
 ####Admin Show Page:
 * This is the page that shows an individual t-shirt with past purchase history with emails and quantities pruchased each time.
 * The admin user can remove t-shirts and update t-shirts from the form in this page. Each t-shirt for sale has a quantity avaiable, a price, and an image url. (all t-shirts are one-size-fits-all)
+
+#####App authors:
+* Brewster Scott
+* Meir Snyder
+* Andrew Tomlinson
+* Aung Barteaux
+
+#####Technologies:
+* Ruby
+* Sinatra
+* Active Record
+* sqlite3
+
+See our trello board for ERD diagram and planning images:
+
+https://trello.com/b/gqu6hnrM
