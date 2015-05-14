@@ -50,3 +50,74 @@ span{
 	position: relative;
 	left: 31px
 }
+.trans_li {
+    display: inline-block;
+    list-style: none;
+}
+
+.history{
+    text-align: center;
+}
+
+.shirtpic {
+	background-image: url();
+	background-color: beige;
+	display: inline-block; 
+	width:300px; 
+	height:300px; 
+	background-size: contain; 
+	background-blend-mode: multiply;  
+	border: 2px solid LightSteelBlue;
+	margin:3px;
+}
+
+table{
+    margin-right: auto;
+    margin-left: auto;
+    width:50%;
+}
+td {
+    height: 25px;
+}
+.one{
+    margin-left: 10px;
+    width:8%;
+}
+.two{
+    margin-left: 100px;
+    width:10%;
+}
+.three{
+    margin-left: 50px;
+    width:5%;
+}
+
+.edit_delete {
+    display: inline-block;
+}
+.confirmHeader{
+    text-align: left;
+    background-color: darkblue;
+    padding: 1px;
+}
+
+.confirmHeader h1{
+    color: white;
+}
+
+.confirmHeader a{
+    text-decoration: none;
+}
+
+.confirm{
+    background-color: lightblue;
+    text-align: center;
+}
+
+.confirm input{
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    font-size: 14px;
+}

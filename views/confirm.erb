@@ -1,14 +1,16 @@
 <html>
-<header>
+<header class = "confirmHeader">
 <a href = "/index" ><h1>T-Shirt.Ly</h1></a>
+<link rel = "stylesheet" type = "text/css" href = "/css/style.css">
 </header>
-<body>
-	<h2>Thank You for your purchase of <%= shirtTransaction.trans_quant %> E-shirts. Costing <%= total %></h2>
-	</br>
-	<img src="<%= shirt.img_url %>">
-	<p>your confirmation Email is <%= shirtTransaction.email %> </p>
-	<form action="/index">
-<input type="submit" value="Awesome!">
+<body class = "confirm">
+    <h3>Thank you for your purchase of <%= shirtTransaction.trans_quant %> E-shirts! The total cost is $<%= total %> - you lucky thing!</h3>
+    <h3>A confirmation e-mail will be sent to <%= shirtTransaction.email %> </h3>
+    </br>
+    <img src="<%= shirt.img_url %>">
+    <form action="/index">
+    <br>
+<input type="submit" value="Thanks for shopping! Back to t-shirts!">
 </form>
 </body>
 </html>
