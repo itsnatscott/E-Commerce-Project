@@ -1,24 +1,35 @@
 <!DOCTYPE>
 <html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
     <body>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-6">
         <header>
-            <a href = "/index" ><h1>T-Shirt.Ly</h1></a>
-            	    </header>
-            	     <ul>
-		  	<div class="shirtpic"><img src="<%= tshirtId.img_url %>"></div>
-		  	<li>$<%= tshirtId.price %></li>
-		</ul>
+            <a href = "/index"><center></center><img class="logo" src="/images/logo.svg"></a>
+                    </header>
+                     <ul>
+              <div class="shirtpic"><img src="<%= tshirtId.img_url %>"></div>
+              <li>$<%= tshirtId.price %></li>
+        </ul>
 
             <div class="adminBar">
-	            <form action="/index/<%= tshirtId.id %>" method="POST">
-		            <input type="text" name="email" placeholder="Your email" required>
-		            <select type="text" name="quant" placeholder="Quantity" required>
+                <form action="/index/<%= tshirtId.id %>" method="POST">
+                    <input type="text" name="email" placeholder="Your email" required>
+                    <select type="text" name="quant" placeholder="Quantity" required>
                         <%  tshirtId.quantity.times do |num| %>
                         <option><%= num + 1 %></option>
                         <% end %>
                         </select>
-		        	<button>Confirm</button>
-		         </form>
-	        </div>
-	</body>
+                    <button>Confirm</button>
+                 </form>
+            </div>
+            </div>
+            </div>
+            </div>
+    </body>
 </html>
