@@ -98,6 +98,10 @@ delete '/admin/:id' do
 	redirect ('/admin')
 end
 
+# get  "/" do
+#   puts request.host_with_port #=> localhost
+# end
+set :port, 1234
 
 
 
