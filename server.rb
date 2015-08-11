@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'pry'
+# require 'pry'
 require 'sqlite3'
 
 require_relative 'models/tshirt'
